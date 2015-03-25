@@ -1,17 +1,23 @@
 package com.soft.news.category;
 
+import java.util.HashMap;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.site.SitePreference;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class CategoryController {
 
 //	  private static final Logger logger = 
 //	            LoggerFactory.getLogger(CategoryController.class);
-
+		@Autowired
+		private CategoryRepository categoryRepository;
+	
+	
 	    @RequestMapping("/")
 	    public String home(SitePreference sitePreference, Model model) {
 	    	
@@ -30,5 +36,13 @@ public class CategoryController {
 	            return "home";
 	        }
 	    }
+	    
+	    @RequestMapping("/cate/get")
+	    public HashMap<String, Object> category(){
+	    	
+	    	System.out.println("test : " + categoryRepository.findCategory(1));
+	    	return null;
+	    }
+	    
 	    
 }

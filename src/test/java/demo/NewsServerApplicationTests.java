@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.HashMap;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -14,5 +16,4 @@ public class NewsServerApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }
