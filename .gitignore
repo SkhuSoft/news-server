@@ -1,4 +1,9 @@
+
 /target/
-/target/classes/
-/target/classes/application.properties
+
 application.properties
+
+
+.settings/
+.project
+.classpath
