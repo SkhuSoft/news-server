@@ -2,6 +2,7 @@ package com.soft.news;
 
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -39,7 +40,12 @@ public class NewsServerApplication  extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(NewsServerApplication.class);
     }
-	
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+    
     @Bean
     public DeviceResolverHandlerInterceptor 
             deviceResolverHandlerInterceptor() {
