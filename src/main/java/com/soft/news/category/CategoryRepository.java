@@ -8,7 +8,6 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Component;
 
-@Component("categoryRepository")
 public interface CategoryRepository  extends JpaRepository<Category, Long> {
 	Category findByCateId(int cateId);
 }

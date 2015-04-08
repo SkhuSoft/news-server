@@ -1,5 +1,6 @@
 package com.soft.news.category;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -12,7 +13,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Category {
+public class Category  implements Serializable  {
 	@Id
 	@GeneratedValue
 	@Column(name="cate_id")
