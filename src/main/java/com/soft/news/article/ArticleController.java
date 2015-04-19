@@ -24,5 +24,4 @@ public class ArticleController {
 	public String get(){
 		return "test";
 	}
-
 }
